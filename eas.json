@@ -11,6 +11,9 @@
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease",
         "applicationArchivePath": "app/build/outputs/**/*.{apk,aab}"
+      },
+      "ios": {
+        "simulator": true
       }
     },
     "production": {
@@ -18,6 +21,9 @@
         "buildType": "app-bundle",
         "gradleCommand": ":app:bundleRelease",
         "applicationArchivePath": "app/build/outputs/**/*.{apk,aab}"
+      },
+      "ios": {
+        "resourceClass": "m-medium"
       }
     }
   }

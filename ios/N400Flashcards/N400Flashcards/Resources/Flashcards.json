@@ -1,0 +1,1352 @@
+[
+  {
+    "word": "Action",
+    "meaning": "Things you do.",
+    "vietnamese": "Hành động",
+    "imageName": "flashcard_action"
+  },
+  {
+    "word": "Admission",
+    "meaning": "Legal entry into the U.S.",
+    "vietnamese": "Sự nhập cảnh / Sự được nhận vào",
+    "imageName": "flashcard_admission"
+  },
+  {
+    "word": "Advocate",
+    "meaning": "To support or help.",
+    "vietnamese": "Ủng hộ / Biện hộ",
+    "imageName": "flashcard_advocate"
+  },
+  {
+    "word": "Airplane",
+    "meaning": "Flying vehicle.",
+    "vietnamese": "Máy bay",
+    "imageName": "flashcard_airplane"
+  },
+  {
+    "word": "Alien",
+    "meaning": "Not a U.S. citizen.",
+    "vietnamese": "Người nước ngoài",
+    "imageName": "flashcard_alien"
+  },
+  {
+    "word": "Alimony",
+    "meaning": "Money to ex-spouse after divorce.",
+    "vietnamese": "Tiền cấp dưỡng sau ly hôn",
+    "imageName": "flashcard_alimony"
+  },
+  {
+    "word": "Allegiance",
+    "meaning": "Loyalty to a country.",
+    "vietnamese": "Lòng trung thành",
+    "imageName": "flashcard_allegiance"
+  },
+  {
+    "word": "Alternative Sentencing",
+    "meaning": "Punishment without jail.",
+    "vietnamese": "Hình phạt thay thế (lao động công ích)",
+    "imageName": "flashcard_alternative_sentencing"
+  },
+  {
+    "word": "Amnesty",
+    "meaning": "Official pardon for a group.",
+    "vietnamese": "Sự ân xá",
+    "imageName": "flashcard_amnesty"
+  },
+  {
+    "word": "Apply",
+    "meaning": "To ask for officially.",
+    "vietnamese": "Nộp đơn / Xin",
+    "imageName": "flashcard_apply"
+  },
+  {
+    "word": "Armed Forces",
+    "meaning": "The U.S. military.",
+    "vietnamese": "Lực lượng vũ trang",
+    "imageName": "flashcard_armed_forces"
+  },
+  {
+    "word": "Arrested",
+    "meaning": "Taken by police (handcuffed).",
+    "vietnamese": "Bị bắt giữ",
+    "imageName": "flashcard_arrested"
+  },
+  {
+    "word": "Assassination",
+    "meaning": "Killing a leader or famous person.",
+    "vietnamese": "Ám sát",
+    "imageName": "flashcard_assassination"
+  },
+  {
+    "word": "Assaulting",
+    "meaning": "Attacking or hitting someone.",
+    "vietnamese": "Tấn công / Hành hung",
+    "imageName": "flashcard_assaulting"
+  },
+  {
+    "word": "Assist",
+    "meaning": "To help.",
+    "vietnamese": "Giúp đỡ / Hỗ trợ",
+    "imageName": "flashcard_assist"
+  },
+  {
+    "word": "Associated",
+    "meaning": "Connected to or involved with.",
+    "vietnamese": "Có liên quan / Liên kết",
+    "imageName": "flashcard_associated"
+  },
+  {
+    "word": "Attempted",
+    "meaning": "Tried to do something.",
+    "vietnamese": "Cố gắng (phạm tội)",
+    "imageName": "flashcard_attempted"
+  },
+  {
+    "word": "Avoid",
+    "meaning": "To keep away from (the draft).",
+    "vietnamese": "Tránh né",
+    "imageName": "flashcard_avoid"
+  },
+  {
+    "word": "Bad Conduct",
+    "meaning": "Bad behavior (in the military).",
+    "vietnamese": "Hạnh kiểm xấu",
+    "imageName": "flashcard_bad_conduct"
+  },
+  {
+    "word": "Bear Arms",
+    "meaning": "To carry a weapon to fight for the U.S.",
+    "vietnamese": "Cầm súng chiến đấu bảo vệ tổ quốc",
+    "imageName": "flashcard_bear_arms"
+  },
+  {
+    "word": "Become",
+    "meaning": "To start to be.",
+    "vietnamese": "Trở thành",
+    "imageName": "flashcard_become"
+  },
+  {
+    "word": "Ceremony",
+    "meaning": "A formal event.",
+    "vietnamese": "Buổi lễ (tuyên thệ)",
+    "imageName": "flashcard_ceremony"
+  },
+  {
+    "word": "Character",
+    "meaning": "Role or quality.",
+    "vietnamese": "Tư cách / Tính chất",
+    "imageName": "flashcard_character"
+  },
+  {
+    "word": "Charged",
+    "meaning": "Police formally say you broke the law.",
+    "vietnamese": "Bị buộc tội",
+    "imageName": "flashcard_charged"
+  },
+  {
+    "word": "Cited",
+    "meaning": "Got a ticket (traffic ticket).",
+    "vietnamese": "Bị phạt giao thông (giấy phạt)",
+    "imageName": "flashcard_cited"
+  },
+  {
+    "word": "Citizen",
+    "meaning": "A member of a country.",
+    "vietnamese": "Công dân",
+    "imageName": "flashcard_citizen"
+  },
+  {
+    "word": "Civilian",
+    "meaning": "Person not in military.",
+    "vietnamese": "Dân sự / Thường dân",
+    "imageName": "flashcard_civilian"
+  },
+  {
+    "word": "Civilian Direction",
+    "meaning": "Orders from non-military leaders.",
+    "vietnamese": "Sự chỉ đạo dân sự",
+    "imageName": "flashcard_civilian_direction"
+  },
+  {
+    "word": "Claim",
+    "meaning": "To say something is true.",
+    "vietnamese": "Tự nhận / Tuyên bố",
+    "imageName": "flashcard_claim"
+  },
+  {
+    "word": "Cleared",
+    "meaning": "Charges are removed/dropped.",
+    "vietnamese": "Được xóa tội",
+    "imageName": "flashcard_cleared"
+  },
+  {
+    "word": "Clemency",
+    "meaning": "Mercy or leniency.",
+    "vietnamese": "Sự khoan hồng",
+    "imageName": "flashcard_clemency"
+  },
+  {
+    "word": "Combat",
+    "meaning": "Fighting in a war.",
+    "vietnamese": "Chiến đấu",
+    "imageName": "flashcard_combat"
+  },
+  {
+    "word": "Commit",
+    "meaning": "To do something bad or illegal.",
+    "vietnamese": "Phạm (tội) / Thực hiện",
+    "imageName": "flashcard_commit"
+  },
+  {
+    "word": "Communist Party",
+    "meaning": "Government owns everything. No freedom.",
+    "vietnamese": "Đảng Cộng sản",
+    "imageName": "flashcard_communist_party"
+  },
+  {
+    "word": "Conduct",
+    "meaning": "Behavior / Actions.",
+    "vietnamese": "Hành vi / Cư xử",
+    "imageName": "flashcard_conduct"
+  },
+  {
+    "word": "Confined",
+    "meaning": "Kept in a place (like jail).",
+    "vietnamese": "Bị giam giữ / Giam cầm",
+    "imageName": "flashcard_confined"
+  },
+  {
+    "word": "Conscript",
+    "meaning": "To force someone to join the army.",
+    "vietnamese": "Bắt đi lính (nghĩa vụ quân sự)",
+    "imageName": "flashcard_conscript"
+  },
+  {
+    "word": "Consent",
+    "meaning": "To agree / Give permission.",
+    "vietnamese": "Đồng ý / Chấp thuận",
+    "imageName": "flashcard_consent"
+  },
+  {
+    "word": "Consider",
+    "meaning": "To think of as.",
+    "vietnamese": "Coi là / Xem là",
+    "imageName": "flashcard_consider"
+  },
+  {
+    "word": "Conspire",
+    "meaning": "To plan with others to do something bad.",
+    "vietnamese": "Thông đồng / Âm mưu",
+    "imageName": "flashcard_conspire"
+  },
+  {
+    "word": "Constitution",
+    "meaning": "The supreme law of the land.",
+    "vietnamese": "Hiến pháp",
+    "imageName": "flashcard_constitution"
+  },
+  {
+    "word": "Controlled Substance",
+    "meaning": "Illegal drugs.",
+    "vietnamese": "Chất cấm / Ma túy",
+    "imageName": "flashcard_controlled_substance"
+  },
+  {
+    "word": "Convicted",
+    "meaning": "Found guilty by a judge or court.",
+    "vietnamese": "Bị kết án",
+    "imageName": "flashcard_convicted"
+  },
+  {
+    "word": "Court-Martialed",
+    "meaning": "Trial by a military court.",
+    "vietnamese": "Ra tòa án binh",
+    "imageName": "flashcard_court_martialed"
+  },
+  {
+    "word": "Crime / Offense",
+    "meaning": "Breaking the law.",
+    "vietnamese": "Tội / Vi phạm pháp luật",
+    "imageName": "flashcard_crime_offense"
+  },
+  {
+    "word": "Cultivate",
+    "meaning": "To grow (plants/drugs).",
+    "vietnamese": "Trồng trọt",
+    "imageName": "flashcard_cultivate"
+  },
+  {
+    "word": "Current",
+    "meaning": "Happening now.",
+    "vietnamese": "Hiện tại",
+    "imageName": "flashcard_current"
+  },
+  {
+    "word": "Damage",
+    "meaning": "Breaking or destroying things.",
+    "vietnamese": "Gây thiệt hại / Phá hủy",
+    "imageName": "flashcard_damage"
+  },
+  {
+    "word": "Deferred Adjudication",
+    "meaning": "Judge delays the decision.",
+    "vietnamese": "Hoãn tuyên án",
+    "imageName": "flashcard_deferred_adjudication"
+  },
+  {
+    "word": "Deferred Prosecution",
+    "meaning": "Legal delay of charges.",
+    "vietnamese": "Hoãn truy tố",
+    "imageName": "flashcard_deferred_prosecution"
+  },
+  {
+    "word": "Dependents",
+    "meaning": "People you support financially.",
+    "vietnamese": "Người phụ thuộc (vợ/chồng, con cái)",
+    "imageName": "flashcard_dependents"
+  },
+  {
+    "word": "Deploy",
+    "meaning": "To move soldiers to a place to work/fight.",
+    "vietnamese": "Điều quân / Triển khai quân",
+    "imageName": "flashcard_deploy"
+  },
+  {
+    "word": "Deportation",
+    "meaning": "Sent back to your home country.",
+    "vietnamese": "Trục xuất",
+    "imageName": "flashcard_deportation"
+  },
+  {
+    "word": "Deserted",
+    "meaning": "Ran away from the military.",
+    "vietnamese": "Đào ngũ",
+    "imageName": "flashcard_deserted"
+  },
+  {
+    "word": "Destruction",
+    "meaning": "Damaging something completely.",
+    "vietnamese": "Sự phá hủy / Tàn phá",
+    "imageName": "flashcard_destruction"
+  },
+  {
+    "word": "Detained",
+    "meaning": "Stopped or held by police.",
+    "vietnamese": "Bị giam giữ / Chặn lại",
+    "imageName": "flashcard_detained"
+  },
+  {
+    "word": "Detention Facility",
+    "meaning": "A place where people are forced to stay.",
+    "vietnamese": "Trại giam giữ",
+    "imageName": "flashcard_detention_facility"
+  },
+  {
+    "word": "Dictatorship",
+    "meaning": "Government with absolute power.",
+    "vietnamese": "Chế độ độc tài",
+    "imageName": "flashcard_dictatorship"
+  },
+  {
+    "word": "Direct",
+    "meaning": "To lead or give orders.",
+    "vietnamese": "Chỉ đạo / Ra lệnh",
+    "imageName": "flashcard_direct"
+  },
+  {
+    "word": "Disability",
+    "meaning": "A physical or mental problem.",
+    "vietnamese": "Khuyết tật",
+    "imageName": "flashcard_disability"
+  },
+  {
+    "word": "Discharged",
+    "meaning": "Left the military.",
+    "vietnamese": "Giải ngũ",
+    "imageName": "flashcard_discharged"
+  },
+  {
+    "word": "Disclose",
+    "meaning": "To tell the truth / To show.",
+    "vietnamese": "Khai báo / Tiết lộ",
+    "imageName": "flashcard_disclose"
+  },
+  {
+    "word": "Dishonorable",
+    "meaning": "Shameful; not honorable.",
+    "vietnamese": "Không danh dự (bị tước danh dự)",
+    "imageName": "flashcard_dishonorable"
+  },
+  {
+    "word": "Disposition",
+    "meaning": "The final result of a court case.",
+    "vietnamese": "Kết quả giải quyết / Phán quyết",
+    "imageName": "flashcard_disposition"
+  },
+  {
+    "word": "Distribute",
+    "meaning": "To give out or sell.",
+    "vietnamese": "Phân phối",
+    "imageName": "flashcard_distribute"
+  },
+  {
+    "word": "Diversion",
+    "meaning": "A program to avoid jail/prosecution.",
+    "vietnamese": "Biện pháp chuyển hướng (tránh ra tòa)",
+    "imageName": "flashcard_diversion"
+  },
+  {
+    "word": "Documentation",
+    "meaning": "Official papers.",
+    "vietnamese": "Giấy tờ / Tài liệu",
+    "imageName": "flashcard_documentation"
+  },
+  {
+    "word": "Domestic Violence",
+    "meaning": "Harming a family member.",
+    "vietnamese": "Bạo hành gia đình",
+    "imageName": "flashcard_domestic_violence"
+  },
+  {
+    "word": "Drafted",
+    "meaning": "Forced to join the army (by government).",
+    "vietnamese": "Bị gọi nhập ngũ (bắt buộc)",
+    "imageName": "flashcard_drafted"
+  },
+  {
+    "word": "Duty",
+    "meaning": "A job or responsibility.",
+    "vietnamese": "Nhiệm vụ / Bổn phận",
+    "imageName": "flashcard_duty"
+  },
+  {
+    "word": "Election",
+    "meaning": "Choosing a leader by voting.",
+    "vietnamese": "Cuộc bầu cử",
+    "imageName": "flashcard_election"
+  },
+  {
+    "word": "Eligible",
+    "meaning": "Qualified to do something.",
+    "vietnamese": "Đủ điều kiện / Hợp lệ",
+    "imageName": "flashcard_eligible"
+  },
+  {
+    "word": "Encourage",
+    "meaning": "To give hope or support.",
+    "vietnamese": "Khuyến khích / Động viên",
+    "imageName": "flashcard_encourage"
+  },
+  {
+    "word": "Engage",
+    "meaning": "To take part in.",
+    "vietnamese": "Tham gia / Thực hiện",
+    "imageName": "flashcard_engage"
+  },
+  {
+    "word": "Enlist",
+    "meaning": "To sign up for the army (voluntarily).",
+    "vietnamese": "Nhập ngũ (tự nguyện)",
+    "imageName": "flashcard_enlist"
+  },
+  {
+    "word": "Entry",
+    "meaning": "Going in.",
+    "vietnamese": "Sự nhập cảnh / Lối vào",
+    "imageName": "flashcard_entry"
+  },
+  {
+    "word": "Establishment",
+    "meaning": "Creating or setting up.",
+    "vietnamese": "Sự thành lập / Thiết lập",
+    "imageName": "flashcard_establishment"
+  },
+  {
+    "word": "Exemption",
+    "meaning": "You do not have to do something.",
+    "vietnamese": "Sự miễn trừ",
+    "imageName": "flashcard_exemption"
+  },
+  {
+    "word": "Explanation",
+    "meaning": "Reason or detail.",
+    "vietnamese": "Sự giải thích",
+    "imageName": "flashcard_explanation"
+  },
+  {
+    "word": "Explosive",
+    "meaning": "A bomb or material that blows up.",
+    "vietnamese": "Chất nổ",
+    "imageName": "flashcard_explosive"
+  },
+  {
+    "word": "Expunged",
+    "meaning": "Erased from the record.",
+    "vietnamese": "Xóa án tích",
+    "imageName": "flashcard_expunged"
+  },
+  {
+    "word": "Fail",
+    "meaning": "Not doing something you should do.",
+    "vietnamese": "Không làm / Thất bại",
+    "imageName": "flashcard_fail"
+  },
+  {
+    "word": "False",
+    "meaning": "Not true.",
+    "vietnamese": "Sai sự thật",
+    "imageName": "flashcard_false"
+  },
+  {
+    "word": "Federal",
+    "meaning": "National government.",
+    "vietnamese": "Liên bang",
+    "imageName": "flashcard_federal"
+  },
+  {
+    "word": "File (Taxes)",
+    "meaning": "To send papers to the government.",
+    "vietnamese": "Nộp (hồ sơ thuế)",
+    "imageName": "flashcard_file_taxes"
+  },
+  {
+    "word": "Force",
+    "meaning": "Using power or violence.",
+    "vietnamese": "Vũ lực",
+    "imageName": "flashcard_force"
+  },
+  {
+    "word": "Foreign",
+    "meaning": "From another country.",
+    "vietnamese": "(Thuộc) Nước ngoài",
+    "imageName": "flashcard_foreign"
+  },
+  {
+    "word": "Form",
+    "meaning": "A paper or type.",
+    "vietnamese": "Mẫu đơn / Hình thức",
+    "imageName": "flashcard_form"
+  },
+  {
+    "word": "Fraudulent",
+    "meaning": "Fake or a lie to trick someone.",
+    "vietnamese": "Gian lận / Giả mạo",
+    "imageName": "flashcard_fraudulent"
+  },
+  {
+    "word": "Gain",
+    "meaning": "To get.",
+    "vietnamese": "Đạt được / Có được",
+    "imageName": "flashcard_gain"
+  },
+  {
+    "word": "Gambling",
+    "meaning": "Playing games for money.",
+    "vietnamese": "Cờ bạc",
+    "imageName": "flashcard_gambling"
+  },
+  {
+    "word": "Genocide",
+    "meaning": "Killing a whole group of people.",
+    "vietnamese": "Diệt chủng",
+    "imageName": "flashcard_genocide"
+  },
+  {
+    "word": "Group",
+    "meaning": "People together.",
+    "vietnamese": "Nhóm",
+    "imageName": "flashcard_group"
+  },
+  {
+    "word": "Guerrilla Group",
+    "meaning": "Using weapons to attack the government.",
+    "vietnamese": "Nhóm du kích",
+    "imageName": "flashcard_guerrilla_group"
+  },
+  {
+    "word": "Harm",
+    "meaning": "To hurt someone.",
+    "vietnamese": "Làm hại",
+    "imageName": "flashcard_harm"
+  },
+  {
+    "word": "Help",
+    "meaning": "To assist.",
+    "vietnamese": "Giúp đỡ",
+    "imageName": "flashcard_help"
+  },
+  {
+    "word": "Hereditary Title",
+    "meaning": "A royal name (King, Prince).",
+    "vietnamese": "Tước hiệu cha truyền con nối",
+    "imageName": "flashcard_hereditary_title"
+  },
+  {
+    "word": "Hijacking",
+    "meaning": "Stealing a plane or vehicle by force.",
+    "vietnamese": "Cướp máy bay / phương tiện",
+    "imageName": "flashcard_hijacking"
+  },
+  {
+    "word": "Honorable",
+    "meaning": "Good service (in the military).",
+    "vietnamese": "Danh dự (loại xuất ngũ tốt)",
+    "imageName": "flashcard_honorable"
+  },
+  {
+    "word": "Hostilities",
+    "meaning": "War or fighting.",
+    "vietnamese": "Chiến sự / Sự thù địch",
+    "imageName": "flashcard_hostilities"
+  },
+  {
+    "word": "Illegal",
+    "meaning": "Against the law.",
+    "vietnamese": "Bất hợp pháp",
+    "imageName": "flashcard_illegal"
+  },
+  {
+    "word": "Immigration Benefit",
+    "meaning": "Things like Visa, Green Card.",
+    "vietnamese": "Quyền lợi di trú",
+    "imageName": "flashcard_immigration_benefit"
+  },
+  {
+    "word": "Import",
+    "meaning": "To bring into the country.",
+    "vietnamese": "Nhập khẩu / Đưa vào",
+    "imageName": "flashcard_import"
+  },
+  {
+    "word": "Incited",
+    "meaning": "Encouraged others to do bad things.",
+    "vietnamese": "Xúi giục / Kích động",
+    "imageName": "flashcard_incited"
+  },
+  {
+    "word": "Include",
+    "meaning": "To have as part.",
+    "vietnamese": "Bao gồm",
+    "imageName": "flashcard_include"
+  },
+  {
+    "word": "Income",
+    "meaning": "Money you earn.",
+    "vietnamese": "Thu nhập",
+    "imageName": "flashcard_income"
+  },
+  {
+    "word": "Influence",
+    "meaning": "Effect of alcohol or drugs.",
+    "vietnamese": "Ảnh hưởng (của rượu/thuốc)",
+    "imageName": "flashcard_influence"
+  },
+  {
+    "word": "Information",
+    "meaning": "Facts.",
+    "vietnamese": "Thông tin",
+    "imageName": "flashcard_information"
+  },
+  {
+    "word": "Injuring",
+    "meaning": "Hurting someone physically.",
+    "vietnamese": "Gây thương tích",
+    "imageName": "flashcard_injuring"
+  },
+  {
+    "word": "Injury",
+    "meaning": "Harm or damage.",
+    "vietnamese": "Chấn thương / Tổn hại",
+    "imageName": "flashcard_injury"
+  },
+  {
+    "word": "Insurgent",
+    "meaning": "A fighter against the government.",
+    "vietnamese": "Quân nổi dậy",
+    "imageName": "flashcard_insurgent"
+  },
+  {
+    "word": "Intent",
+    "meaning": "Purpose or plan to do something.",
+    "vietnamese": "Ý định",
+    "imageName": "flashcard_intent"
+  },
+  {
+    "word": "Involved",
+    "meaning": "Connected to.",
+    "vietnamese": "Có liên quan / Dính líu",
+    "imageName": "flashcard_involved"
+  },
+  {
+    "word": "Jail / Prison",
+    "meaning": "A place where criminals are kept.",
+    "vietnamese": "Nhà tù",
+    "imageName": "flashcard_jail_prison"
+  },
+  {
+    "word": "Keep",
+    "meaning": "To hold or not let go.",
+    "vietnamese": "Giữ / Giam giữ",
+    "imageName": "flashcard_keep"
+  },
+  {
+    "word": "Kidnapping",
+    "meaning": "Taking a person by force.",
+    "vietnamese": "Bắt cóc",
+    "imageName": "flashcard_kidnapping"
+  },
+  {
+    "word": "Killing",
+    "meaning": "Making someone die.",
+    "vietnamese": "Giết người",
+    "imageName": "flashcard_killing"
+  },
+  {
+    "word": "Labor Camp",
+    "meaning": "Prison with forced work.",
+    "vietnamese": "Trại lao động khổ sai",
+    "imageName": "flashcard_labor_camp"
+  },
+  {
+    "word": "Law Enforcement",
+    "meaning": "Police or agencies that enforce laws.",
+    "vietnamese": "Cơ quan thực thi pháp luật",
+    "imageName": "flashcard_law_enforcement"
+  },
+  {
+    "word": "Lawful",
+    "meaning": "Legal / Allowed by law.",
+    "vietnamese": "Hợp pháp",
+    "imageName": "flashcard_lawful"
+  },
+  {
+    "word": "Lie",
+    "meaning": "To say something that is not true.",
+    "vietnamese": "Nói dối",
+    "imageName": "flashcard_lie"
+  },
+  {
+    "word": "Manufacture",
+    "meaning": "To make or produce.",
+    "vietnamese": "Sản xuất / Chế tạo",
+    "imageName": "flashcard_manufacture"
+  },
+  {
+    "word": "Member",
+    "meaning": "A person who belongs to a group.",
+    "vietnamese": "Thành viên",
+    "imageName": "flashcard_member"
+  },
+  {
+    "word": "Mental Impairment",
+    "meaning": "A problem with the mind.",
+    "vietnamese": "Suy yếu tâm thần",
+    "imageName": "flashcard_mental_impairment"
+  },
+  {
+    "word": "Military Unit",
+    "meaning": "Official army group.",
+    "vietnamese": "Đơn vị quân đội",
+    "imageName": "flashcard_military_unit"
+  },
+  {
+    "word": "Militia",
+    "meaning": "An army of citizens.",
+    "vietnamese": "Dân quân",
+    "imageName": "flashcard_militia"
+  },
+  {
+    "word": "Misleading",
+    "meaning": "Making people believe something wrong.",
+    "vietnamese": "Gây hiểu lầm",
+    "imageName": "flashcard_misleading"
+  },
+  {
+    "word": "Misrepresentation",
+    "meaning": "Lying to get something.",
+    "vietnamese": "Xuyên tạc / Khai gian",
+    "imageName": "flashcard_misrepresentation"
+  },
+  {
+    "word": "Narcotics",
+    "meaning": "Illegal drugs.",
+    "vietnamese": "Ma túy",
+    "imageName": "flashcard_narcotics"
+  },
+  {
+    "word": "Nobility",
+    "meaning": "High social rank (like Duke, Prince).",
+    "vietnamese": "Giới quý tộc",
+    "imageName": "flashcard_nobility"
+  },
+  {
+    "word": "Noncitizen",
+    "meaning": "Not a citizen.",
+    "vietnamese": "Người không phải công dân",
+    "imageName": "flashcard_noncitizen"
+  },
+  {
+    "word": "Noncombatant",
+    "meaning": "In army but no fighting.",
+    "vietnamese": "Phục vụ không chiến đấu",
+    "imageName": "flashcard_noncombatant"
+  },
+  {
+    "word": "Nonresident",
+    "meaning": "Not living in the U.S.",
+    "vietnamese": "Người không thường trú",
+    "imageName": "flashcard_nonresident"
+  },
+  {
+    "word": "Oath",
+    "meaning": "A promise.",
+    "vietnamese": "Lời thề",
+    "imageName": "flashcard_oath"
+  },
+  {
+    "word": "Oath of Allegiance",
+    "meaning": "A promise to be loyal to the U.S.",
+    "vietnamese": "Lời tuyên thệ trung thành",
+    "imageName": "flashcard_oath_of_allegiance"
+  },
+  {
+    "word": "Obtain",
+    "meaning": "To get something.",
+    "vietnamese": "Đạt được / Có được",
+    "imageName": "flashcard_obtain"
+  },
+  {
+    "word": "Occur",
+    "meaning": "To happen.",
+    "vietnamese": "Xảy ra",
+    "imageName": "flashcard_occur"
+  },
+  {
+    "word": "Officer",
+    "meaning": "Person with authority.",
+    "vietnamese": "Sĩ quan / Cán bộ",
+    "imageName": "flashcard_officer"
+  },
+  {
+    "word": "Official",
+    "meaning": "A person with authority.",
+    "vietnamese": "Viên chức / Quan chức",
+    "imageName": "flashcard_official"
+  },
+  {
+    "word": "Opposition",
+    "meaning": "Being against something.",
+    "vietnamese": "Sự chống đối / Đối lập",
+    "imageName": "flashcard_opposition"
+  },
+  {
+    "word": "Order of Nobility",
+    "meaning": "A high rank given by a King.",
+    "vietnamese": "Tước vị quý tộc",
+    "imageName": "flashcard_order_of_nobility"
+  },
+  {
+    "word": "Organization",
+    "meaning": "An organized group of people.",
+    "vietnamese": "Tổ chức",
+    "imageName": "flashcard_organization"
+  },
+  {
+    "word": "Overdue",
+    "meaning": "Late (not paid on time).",
+    "vietnamese": "Quá hạn",
+    "imageName": "flashcard_overdue"
+  },
+  {
+    "word": "Overthrow",
+    "meaning": "To remove government by force.",
+    "vietnamese": "Lật đổ chính quyền",
+    "imageName": "flashcard_overthrow"
+  },
+  {
+    "word": "Owe",
+    "meaning": "To need to pay money.",
+    "vietnamese": "Nợ",
+    "imageName": "flashcard_owe"
+  },
+  {
+    "word": "Paramilitary Unit",
+    "meaning": "Civilians acting like an army.",
+    "vietnamese": "Nhóm bán quân sự",
+    "imageName": "flashcard_paramilitary_unit"
+  },
+  {
+    "word": "Paraphernalia",
+    "meaning": "Tools for using drugs.",
+    "vietnamese": "Dụng cụ hút chích",
+    "imageName": "flashcard_paraphernalia"
+  },
+  {
+    "word": "Pardon",
+    "meaning": "Official forgiveness for a crime.",
+    "vietnamese": "Lệnh ân xá (tha tội hoàn toàn)",
+    "imageName": "flashcard_pardon"
+  },
+  {
+    "word": "Parole",
+    "meaning": "Early release from prison.",
+    "vietnamese": "Tha tù trước thời hạn",
+    "imageName": "flashcard_parole"
+  },
+  {
+    "word": "Participate",
+    "meaning": "To be part of or join in.",
+    "vietnamese": "Tham gia",
+    "imageName": "flashcard_participate"
+  },
+  {
+    "word": "Pending",
+    "meaning": "Waiting for a decision.",
+    "vietnamese": "Đang chờ xử lý",
+    "imageName": "flashcard_pending"
+  },
+  {
+    "word": "Permanent",
+    "meaning": "Lasting forever.",
+    "vietnamese": "Vĩnh viễn / Thường trú",
+    "imageName": "flashcard_permanent"
+  },
+  {
+    "word": "Persecute",
+    "meaning": "To hurt because of race/religion.",
+    "vietnamese": "Đàn áp / Bức hại",
+    "imageName": "flashcard_persecute"
+  },
+  {
+    "word": "Police Unit",
+    "meaning": "Official law enforcement group.",
+    "vietnamese": "Đơn vị cảnh sát",
+    "imageName": "flashcard_police_unit"
+  },
+  {
+    "word": "Political Opinion",
+    "meaning": "What you think about politics.",
+    "vietnamese": "Quan điểm chính trị",
+    "imageName": "flashcard_political_opinion"
+  },
+  {
+    "word": "Polygamy",
+    "meaning": "Married to more than one person.",
+    "vietnamese": "Chế độ đa thê",
+    "imageName": "flashcard_polygamy"
+  },
+  {
+    "word": "Practice",
+    "meaning": "To do or follow (a religion).",
+    "vietnamese": "Thực hành / Theo (tôn giáo)",
+    "imageName": "flashcard_practice"
+  },
+  {
+    "word": "Prepare",
+    "meaning": "To get ready.",
+    "vietnamese": "Chuẩn bị",
+    "imageName": "flashcard_prepare"
+  },
+  {
+    "word": "Prison Camp",
+    "meaning": "Camp for prisoners of war/politics.",
+    "vietnamese": "Trại tù binh / Trại tập trung",
+    "imageName": "flashcard_prison_camp"
+  },
+  {
+    "word": "Prisoner",
+    "meaning": "Person kept in prison.",
+    "vietnamese": "Tù nhân",
+    "imageName": "flashcard_prisoner"
+  },
+  {
+    "word": "Probation",
+    "meaning": "No jail, but must report to police.",
+    "vietnamese": "Quản chế (tù treo)",
+    "imageName": "flashcard_probation"
+  },
+  {
+    "word": "Proceedings",
+    "meaning": "A legal case or process.",
+    "vietnamese": "Thủ tục tố tụng / Vụ kiện",
+    "imageName": "flashcard_proceedings"
+  },
+  {
+    "word": "Proceeds",
+    "meaning": "Money earned (usually illegal).",
+    "vietnamese": "Tiền thu được",
+    "imageName": "flashcard_proceeds"
+  },
+  {
+    "word": "Procure",
+    "meaning": "To find someone (for prostitution).",
+    "vietnamese": "Môi giới / Dắt mối",
+    "imageName": "flashcard_procure"
+  },
+  {
+    "word": "Property",
+    "meaning": "Things you own.",
+    "vietnamese": "Tài sản",
+    "imageName": "flashcard_property"
+  },
+  {
+    "word": "Prostitution",
+    "meaning": "Sex for money.",
+    "vietnamese": "Mại dâm",
+    "imageName": "flashcard_prostitution"
+  },
+  {
+    "word": "Provide",
+    "meaning": "To give.",
+    "vietnamese": "Cung cấp",
+    "imageName": "flashcard_provide"
+  },
+  {
+    "word": "Public Benefit",
+    "meaning": "Money or help from government.",
+    "vietnamese": "Trợ cấp xã hội",
+    "imageName": "flashcard_public_benefit"
+  },
+  {
+    "word": "Purpose",
+    "meaning": "Reason.",
+    "vietnamese": "Mục đích",
+    "imageName": "flashcard_purpose"
+  },
+  {
+    "word": "Question",
+    "meaning": "Something you ask.",
+    "vietnamese": "Câu hỏi",
+    "imageName": "flashcard_question"
+  },
+  {
+    "word": "Race",
+    "meaning": "Ethnic group or background.",
+    "vietnamese": "Chủng tộc",
+    "imageName": "flashcard_race"
+  },
+  {
+    "word": "Reason",
+    "meaning": "Why something happens.",
+    "vietnamese": "Lý do",
+    "imageName": "flashcard_reason"
+  },
+  {
+    "word": "Rebel Group",
+    "meaning": "Fighting against the government.",
+    "vietnamese": "Nhóm phiến quân",
+    "imageName": "flashcard_rebel_group"
+  },
+  {
+    "word": "Receive",
+    "meaning": "To get.",
+    "vietnamese": "Nhận",
+    "imageName": "flashcard_receive"
+  },
+  {
+    "word": "Records",
+    "meaning": "Written accounts or files.",
+    "vietnamese": "Hồ sơ",
+    "imageName": "flashcard_records"
+  },
+  {
+    "word": "Recruit",
+    "meaning": "To ask someone to join.",
+    "vietnamese": "Tuyển mộ",
+    "imageName": "flashcard_recruit"
+  },
+  {
+    "word": "Register",
+    "meaning": "To sign up.",
+    "vietnamese": "Đăng ký",
+    "imageName": "flashcard_register"
+  },
+  {
+    "word": "Regulation",
+    "meaning": "Official rule or law.",
+    "vietnamese": "Quy định",
+    "imageName": "flashcard_regulation"
+  },
+  {
+    "word": "Rehabilitative Program",
+    "meaning": "Program to help cure drugs/alcohol.",
+    "vietnamese": "Chương trình phục hồi nhân phẩm",
+    "imageName": "flashcard_rehabilitative_program"
+  },
+  {
+    "word": "Religion",
+    "meaning": "Belief in God.",
+    "vietnamese": "Tôn giáo",
+    "imageName": "flashcard_religion"
+  },
+  {
+    "word": "Removal",
+    "meaning": "Being taken out of the U.S.",
+    "vietnamese": "Bị trục xuất / Di lý",
+    "imageName": "flashcard_removal"
+  },
+  {
+    "word": "Rescission",
+    "meaning": "Taking back a decision.",
+    "vietnamese": "Thu hồi / Hủy bỏ",
+    "imageName": "flashcard_rescission"
+  },
+  {
+    "word": "Resident",
+    "meaning": "Person living in a place.",
+    "vietnamese": "Cư dân / Người thường trú",
+    "imageName": "flashcard_resident"
+  },
+  {
+    "word": "Residing",
+    "meaning": "Living in.",
+    "vietnamese": "Đang sinh sống / Cư trú",
+    "imageName": "flashcard_residing"
+  },
+  {
+    "word": "Return",
+    "meaning": "To go back or a tax form.",
+    "vietnamese": "Trở lại / Tờ khai thuế",
+    "imageName": "flashcard_return"
+  },
+  {
+    "word": "Sabotage",
+    "meaning": "Destroying things on purpose.",
+    "vietnamese": "Phá hoại",
+    "imageName": "flashcard_sabotage"
+  },
+  {
+    "word": "Sealed",
+    "meaning": "Hidden or closed record.",
+    "vietnamese": "Hồ sơ bị niêm phong",
+    "imageName": "flashcard_sealed"
+  },
+  {
+    "word": "Selective Service",
+    "meaning": "Agency for military draft registration.",
+    "vietnamese": "Hệ thống Nghĩa vụ Quân sự",
+    "imageName": "flashcard_selective_service"
+  },
+  {
+    "word": "Self-defense Unit",
+    "meaning": "A group protecting themselves.",
+    "vietnamese": "Đơn vị tự vệ",
+    "imageName": "flashcard_self_defense_unit"
+  },
+  {
+    "word": "Separation",
+    "meaning": "Living apart but married.",
+    "vietnamese": "Ly thân",
+    "imageName": "flashcard_separation"
+  },
+  {
+    "word": "Served",
+    "meaning": "Worked in.",
+    "vietnamese": "Phục vụ",
+    "imageName": "flashcard_served"
+  },
+  {
+    "word": "Severely",
+    "meaning": "Very badly.",
+    "vietnamese": "Nghiêm trọng / Dữ dội",
+    "imageName": "flashcard_severely"
+  },
+  {
+    "word": "Sexual Contact",
+    "meaning": "Touching private parts.",
+    "vietnamese": "Quan hệ tình dục",
+    "imageName": "flashcard_sexual_contact"
+  },
+  {
+    "word": "Smuggle",
+    "meaning": "To hide and bring illegal things.",
+    "vietnamese": "Buôn lậu",
+    "imageName": "flashcard_smuggle"
+  },
+  {
+    "word": "Social Group",
+    "meaning": "People sharing similar characteristics.",
+    "vietnamese": "Nhóm xã hội",
+    "imageName": "flashcard_social_group"
+  },
+  {
+    "word": "Specify",
+    "meaning": "To state clearly.",
+    "vietnamese": "Ghi rõ / Chỉ rõ",
+    "imageName": "flashcard_specify"
+  },
+  {
+    "word": "Stationed",
+    "meaning": "Where a soldier works.",
+    "vietnamese": "Đóng quân",
+    "imageName": "flashcard_stationed"
+  },
+  {
+    "word": "Suffering",
+    "meaning": "Feeling pain or distress.",
+    "vietnamese": "Đau khổ",
+    "imageName": "flashcard_suffering"
+  },
+  {
+    "word": "Supplies",
+    "meaning": "Things needed (food/tools).",
+    "vietnamese": "Nhu yếu phẩm / Tiếp tế",
+    "imageName": "flashcard_supplies"
+  },
+  {
+    "word": "Support",
+    "meaning": "To pay for help.",
+    "vietnamese": "Chu cấp / Nuôi dưỡng",
+    "imageName": "flashcard_support"
+  },
+  {
+    "word": "Suspended Sentence",
+    "meaning": "Delayed jail sentence.",
+    "vietnamese": "Án treo",
+    "imageName": "flashcard_suspended_sentence"
+  },
+  {
+    "word": "Taxes",
+    "meaning": "Money paid to government.",
+    "vietnamese": "Thuế",
+    "imageName": "flashcard_taxes"
+  },
+  {
+    "word": "Threaten",
+    "meaning": "To say you will hurt someone.",
+    "vietnamese": "Đe dọa",
+    "imageName": "flashcard_threaten"
+  },
+  {
+    "word": "Torture",
+    "meaning": "Causing great pain.",
+    "vietnamese": "Tra tấn",
+    "imageName": "flashcard_torture"
+  },
+  {
+    "word": "Totalitarian Party",
+    "meaning": "Dictatorship. No freedom.",
+    "vietnamese": "Đảng độc tài",
+    "imageName": "flashcard_totalitarian_party"
+  },
+  {
+    "word": "Trafficked",
+    "meaning": "Buying or selling people/drugs.",
+    "vietnamese": "Buôn bán trái phép (người/ma túy)",
+    "imageName": "flashcard_trafficked"
+  },
+  {
+    "word": "Training",
+    "meaning": "Learning how to do something.",
+    "vietnamese": "Huấn luyện / Đào tạo",
+    "imageName": "flashcard_training"
+  },
+  {
+    "word": "Transport",
+    "meaning": "To move things.",
+    "vietnamese": "Vận chuyển",
+    "imageName": "flashcard_transport"
+  },
+  {
+    "word": "Transportation",
+    "meaning": "Moving things.",
+    "vietnamese": "Vận chuyển / Giao thông",
+    "imageName": "flashcard_transportation"
+  },
+  {
+    "word": "Unconstitutional",
+    "meaning": "Not allowed by the Constitution.",
+    "vietnamese": "Vi hiến / Trái Hiến pháp",
+    "imageName": "flashcard_unconstitutional"
+  },
+  {
+    "word": "Unlawful",
+    "meaning": "Against the law; illegal.",
+    "vietnamese": "Bất hợp pháp / Trái pháp luật",
+    "imageName": "flashcard_unlawful"
+  },
+  {
+    "word": "Use",
+    "meaning": "To do something with tool.",
+    "vietnamese": "Sử dụng",
+    "imageName": "flashcard_use"
+  },
+  {
+    "word": "Vehicle",
+    "meaning": "Car, truck, or bus.",
+    "vietnamese": "Phương tiện / Xe cộ",
+    "imageName": "flashcard_vehicle"
+  },
+  {
+    "word": "Vessel",
+    "meaning": "A ship or boat.",
+    "vietnamese": "Tàu thuyền lớn",
+    "imageName": "flashcard_vessel"
+  },
+  {
+    "word": "Vigilante Unit",
+    "meaning": "Acting like police illegally.",
+    "vietnamese": "Nhóm dân phòng tự phát",
+    "imageName": "flashcard_vigilante_unit"
+  },
+  {
+    "word": "Violation",
+    "meaning": "Breaking a rule.",
+    "vietnamese": "Sự vi phạm",
+    "imageName": "flashcard_violation"
+  },
+  {
+    "word": "Violence",
+    "meaning": "Using force to hurt people.",
+    "vietnamese": "Bạo lực",
+    "imageName": "flashcard_violence"
+  },
+  {
+    "word": "Volunteer",
+    "meaning": "To work without pay.",
+    "vietnamese": "Tình nguyện",
+    "imageName": "flashcard_volunteer"
+  },
+  {
+    "word": "Vote",
+    "meaning": "To choose a leader.",
+    "vietnamese": "Bầu cử",
+    "imageName": "flashcard_vote"
+  },
+  {
+    "word": "War",
+    "meaning": "Fighting between countries.",
+    "vietnamese": "Chiến tranh",
+    "imageName": "flashcard_war"
+  },
+  {
+    "word": "Way",
+    "meaning": "Method.",
+    "vietnamese": "Cách thức / Con đường",
+    "imageName": "flashcard_way"
+  },
+  {
+    "word": "Weapon",
+    "meaning": "Gun, knife, or bomb.",
+    "vietnamese": "Vũ khí",
+    "imageName": "flashcard_weapon"
+  },
+  {
+    "word": "Willing",
+    "meaning": "Ready to do something.",
+    "vietnamese": "Sẵn lòng / Tự nguyện",
+    "imageName": "flashcard_willing"
+  },
+  {
+    "word": "Withheld Adjudication",
+    "meaning": "Judge delays the final decision.",
+    "vietnamese": "Hoãn phán quyết",
+    "imageName": "flashcard_withheld_adjudication"
+  },
+  {
+    "word": "Work of National Importance",
+    "meaning": "Helping country in emergency.",
+    "vietnamese": "Công việc quan trọng quốc gia",
+    "imageName": "flashcard_work_of_national_importance"
+  }
+]

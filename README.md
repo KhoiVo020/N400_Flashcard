@@ -2,6 +2,8 @@
 
 Native Android app configured for EAS Build from the repository root.
 
+The repository now also includes a native SwiftUI iOS app under `ios/N400Flashcards/`.
+
 ## Build context
 
 EAS must be run from the repository root, which contains:
@@ -16,7 +18,9 @@ Do not point EAS at the `app/` subfolder. The correct project root is the top-le
 ## EAS profiles
 
 - `preview`: internal Android APK build
+- `preview` on iOS: simulator build
 - `production`: Android App Bundle (`.aab`) for Play Store upload
+- `production` on iOS: signed device/archive build
 
 ## First build
 
@@ -37,6 +41,18 @@ or
 
 ```bash
 npm run eas:build:production
+```
+
+For iOS:
+
+```bash
+npm run eas:build:ios:preview
+```
+
+or
+
+```bash
+npm run eas:build:ios:production
 ```
 
 ## Versioning

@@ -3,8 +3,17 @@
     "name": "N400 WhatMean Flashcard 2026",
     "slug": "n400-whatmean-flashcard-2026",
     "version": "3.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "android": {
       "package": "com.khoivo.n400whatmeanflashcard2026"
+    },
+    "ios": {
+      "bundleIdentifier": "com.khoivo.n400whatmeanflashcard2026.ios",
+      "buildNumber": "1",
+      "supportsTablet": true
     },
     "extra": {
       "eas": {

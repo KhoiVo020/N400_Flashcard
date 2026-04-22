@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000101 /* N400FlashcardsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000201 /* N400FlashcardsApp.swift */; };
+		000000000000000000000102 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000202 /* Flashcard.swift */; };
+		000000000000000000000103 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000203 /* SpeechManager.swift */; };
+		000000000000000000000104 /* FlashcardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000204 /* FlashcardStore.swift */; };
+		000000000000000000000105 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000205 /* ContentView.swift */; };
+		000000000000000000000106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000206 /* Assets.xcassets */; };
+		000000000000000000000107 /* Flashcards.json in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000207 /* Flashcards.json */; };
+		000000000000000000000108 /* drawable-nodpi in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000208 /* drawable-nodpi */; };
+		000000000000000000000109 /* n400_app_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000209 /* n400_app_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000011 /* N400Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N400Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000201 /* N400FlashcardsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N400FlashcardsApp.swift; sourceTree = "<group>"; };
+		000000000000000000000202 /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		000000000000000000000203 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		000000000000000000000204 /* FlashcardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardStore.swift; sourceTree = "<group>"; };
+		000000000000000000000205 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		000000000000000000000206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000207 /* Flashcards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Resources/Flashcards.json; sourceTree = "<group>"; };
+		000000000000000000000208 /* drawable-nodpi */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "drawable-nodpi"; path = ../../app/src/main/res/drawable-nodpi; sourceTree = SOURCE_ROOT; };
+		000000000000000000000209 /* n400_app_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ../../app/src/main/res/drawable/n400_app_logo.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000030 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000032 /* N400Flashcards */,
+				000000000000000000000031 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000031 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000011 /* N400Flashcards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000032 /* N400Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000033 /* App */,
+				000000000000000000000034 /* Models */,
+				000000000000000000000035 /* Services */,
+				000000000000000000000036 /* ViewModels */,
+				000000000000000000000037 /* Views */,
+				000000000000000000000206 /* Assets.xcassets */,
+				000000000000000000000207 /* Flashcards.json */,
+				000000000000000000000208 /* drawable-nodpi */,
+				000000000000000000000209 /* n400_app_logo.png */,
+			);
+			path = N400Flashcards;
+			sourceTree = "<group>";
+		};
+		000000000000000000000033 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000201 /* N400FlashcardsApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		000000000000000000000034 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000202 /* Flashcard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		000000000000000000000035 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000203 /* SpeechManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		000000000000000000000036 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000204 /* FlashcardStore.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		000000000000000000000037 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000205 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000010 /* N400Flashcards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000302 /* Build configuration list for PBXNativeTarget "N400Flashcards" */;
+			buildPhases = (
+				000000000000000000000020 /* Sources */,
+				000000000000000000000021 /* Frameworks */,
+				000000000000000000000022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = N400Flashcards;
+			productName = N400Flashcards;
+			productReference = 000000000000000000000011 /* N400Flashcards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					000000000000000000000010 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000000301 /* Build configuration list for PBXProject "N400Flashcards" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000030;
+			productRefGroup = 000000000000000000000031 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000010 /* N400Flashcards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000106 /* Assets.xcassets in Resources */,
+				000000000000000000000107 /* Flashcards.json in Resources */,
+				000000000000000000000108 /* drawable-nodpi in Resources */,
+				000000000000000000000109 /* n400_app_logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000101 /* N400FlashcardsApp.swift in Sources */,
+				000000000000000000000102 /* Flashcard.swift in Sources */,
+				000000000000000000000103 /* SpeechManager.swift in Sources */,
+				000000000000000000000104 /* FlashcardStore.swift in Sources */,
+				000000000000000000000105 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		000000000000000000000402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000000411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "N400 Flashcard";
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khoivo.n400whatmeanflashcard2026.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "N400 Flashcard";
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.khoivo.n400whatmeanflashcard2026.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000301 /* Build configuration list for PBXProject "N400Flashcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000401 /* Debug */,
+				000000000000000000000402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000302 /* Build configuration list for PBXNativeTarget "N400Flashcards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000411 /* Debug */,
+				000000000000000000000412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000001 /* Project object */;
+}
