@@ -1,12 +1,12 @@
 package com.khoivo.n400whatmeanflashcard2026
 
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.speech.tts.Voice
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
@@ -31,13 +31,12 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.khoivo.n400whatmeanflashcard2026.ui.flashcard.Flashcard
 import com.khoivo.n400whatmeanflashcard2026.ui.flashcard.FlashcardViewModel
@@ -111,6 +110,64 @@ class MainActivity : ComponentActivity(), TextToSpeech.OnInitListener {
 
 }
 
+private enum class WindowWidthBucket {
+    Compact,
+    Medium,
+    Expanded
+}
+
+private enum class WindowHeightBucket {
+    Compact,
+    Medium,
+    Expanded
+}
+
+private data class LayoutSpec(
+    val widthBucket: WindowWidthBucket,
+    val heightBucket: WindowHeightBucket,
+    val useSplitLayout: Boolean,
+    val topBarWidth: Dp,
+    val screenPadding: Dp,
+    val paneSpacing: Dp
+) {
+    val isCompactHeight: Boolean
+        get() = heightBucket == WindowHeightBucket.Compact
+
+    val isCompactWidth: Boolean
+        get() = widthBucket == WindowWidthBucket.Compact
+}
+
+private fun resolveLayoutSpec(maxWidth: Dp, maxHeight: Dp): LayoutSpec {
+    val widthBucket = when {
+        maxWidth < 600.dp -> WindowWidthBucket.Compact
+        maxWidth < 840.dp -> WindowWidthBucket.Medium
+        else -> WindowWidthBucket.Expanded
+    }
+    val heightBucket = when {
+        maxHeight < 480.dp -> WindowHeightBucket.Compact
+        maxHeight < 900.dp -> WindowHeightBucket.Medium
+        else -> WindowHeightBucket.Expanded
+    }
+    val useSplitLayout = maxWidth >= 720.dp || (maxWidth >= 600.dp && maxHeight <= 520.dp)
+    val topBarWidth = (maxWidth * if (widthBucket == WindowWidthBucket.Expanded) 0.28f else 0.34f)
+        .coerceIn(260.dp, 360.dp)
+    val screenPadding = when (widthBucket) {
+        WindowWidthBucket.Compact -> 8.dp
+        WindowWidthBucket.Medium -> 12.dp
+        WindowWidthBucket.Expanded -> 16.dp
+    }
+    val paneSpacing = if (heightBucket == WindowHeightBucket.Compact) 10.dp else 14.dp
+
+    return LayoutSpec(
+        widthBucket = widthBucket,
+        heightBucket = heightBucket,
+        useSplitLayout = useSplitLayout,
+        topBarWidth = topBarWidth,
+        screenPadding = screenPadding,
+        paneSpacing = paneSpacing
+    )
+}
+
 @Composable
 fun FlashcardApp(
     tts: TextToSpeech,
@@ -140,28 +197,72 @@ fun FlashcardApp(
             )
     ) {
         BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-            val isLandscape = maxWidth > maxHeight
-            val isCompactHeight = maxHeight < 760.dp || isLandscape
+            val layoutSpec = remember(maxWidth, maxHeight) {
+                resolveLayoutSpec(maxWidth = maxWidth, maxHeight = maxHeight)
+            }
 
-            if (isLandscape) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(12.dp),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    Surface(
+            Crossfade(targetState = layoutSpec.useSplitLayout, label = "windowLayout") { useSplitLayout ->
+                if (useSplitLayout) {
+                    Row(
                         modifier = Modifier
-                            .widthIn(min = 240.dp, max = 320.dp)
-                            .fillMaxHeight(),
-                        shape = RoundedCornerShape(24.dp),
-                        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.92f),
-                        tonalElevation = 4.dp
+                            .fillMaxSize()
+                            .padding(layoutSpec.screenPadding),
+                        horizontalArrangement = Arrangement.spacedBy(layoutSpec.paneSpacing)
                     ) {
+                        Surface(
+                            modifier = Modifier
+                                .width(layoutSpec.topBarWidth)
+                                .fillMaxHeight(),
+                            shape = RoundedCornerShape(24.dp),
+                            color = MaterialTheme.colorScheme.surface.copy(alpha = 0.92f),
+                            tonalElevation = 4.dp
+                        ) {
+                            TopBar(
+                                modifier = Modifier.fillMaxSize(),
+                                isCompactHeight = layoutSpec.isCompactHeight,
+                                isCompactWidth = layoutSpec.isCompactWidth,
+                                isSplitLayout = true,
+                                isShuffled = uiState.isShuffled,
+                                ttsSpeed = uiState.ttsSpeed,
+                                preferOnlineVoice = uiState.preferOnlineVoice,
+                                isOnlineVoiceAvailable = isOnlineVoiceAvailable,
+                                selectedWordCount = uiState.selectedWords.size,
+                                totalWordCount = uiState.allFlashcards.size,
+                                onToggleShuffle = { viewModel.toggleShuffle() },
+                                onToggleSpeed = { viewModel.toggleSpeed() },
+                                onToggleVoice = { viewModel.toggleVoicePreference() },
+                                onInstallVoiceData = {
+                                    runCatching {
+                                        context.startActivity(Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA))
+                                    }
+                                },
+                                onOpenWordPicker = { isWordPickerOpen = true }
+                            )
+                        }
+
+                        DeckPane(
+                            modifier = Modifier.weight(1f),
+                            currentCard = currentCard,
+                            tts = tts,
+                            isTtsReady = isTtsReady,
+                            ttsSpeed = uiState.ttsSpeed,
+                            currentIndex = uiState.currentIndex,
+                            totalCards = uiState.flashcards.size,
+                            isCompactHeight = layoutSpec.isCompactHeight,
+                            isCompactWidth = layoutSpec.isCompactWidth,
+                            isWideLayout = true,
+                            onOpenWordPicker = { isWordPickerOpen = true },
+                            onNext = { viewModel.nextCard() },
+                            onPrev = { viewModel.prevCard() }
+                        )
+                    }
+                } else {
+                    Column(modifier = Modifier.fillMaxSize()) {
                         TopBar(
-                            modifier = Modifier.fillMaxSize(),
-                            isCompactHeight = true,
-                            isLandscape = true,
+                            modifier = Modifier,
+                            isCompactHeight = layoutSpec.isCompactHeight,
+                            isCompactWidth = layoutSpec.isCompactWidth,
+                            isSplitLayout = false,
                             isShuffled = uiState.isShuffled,
                             ttsSpeed = uiState.ttsSpeed,
                             preferOnlineVoice = uiState.preferOnlineVoice,
@@ -178,60 +279,23 @@ fun FlashcardApp(
                             },
                             onOpenWordPicker = { isWordPickerOpen = true }
                         )
+
+                        DeckPane(
+                            modifier = Modifier.weight(1f),
+                            currentCard = currentCard,
+                            tts = tts,
+                            isTtsReady = isTtsReady,
+                            ttsSpeed = uiState.ttsSpeed,
+                            currentIndex = uiState.currentIndex,
+                            totalCards = uiState.flashcards.size,
+                            isCompactHeight = layoutSpec.isCompactHeight,
+                            isCompactWidth = layoutSpec.isCompactWidth,
+                            isWideLayout = false,
+                            onOpenWordPicker = { isWordPickerOpen = true },
+                            onNext = { viewModel.nextCard() },
+                            onPrev = { viewModel.prevCard() }
+                        )
                     }
-
-                    DeckPane(
-                        modifier = Modifier.weight(1f),
-                        currentCard = currentCard,
-                        tts = tts,
-                        isTtsReady = isTtsReady,
-                        ttsSpeed = uiState.ttsSpeed,
-                        currentIndex = uiState.currentIndex,
-                        totalCards = uiState.flashcards.size,
-                        isCompactHeight = true,
-                        isLandscape = true,
-                        onOpenWordPicker = { isWordPickerOpen = true },
-                        onNext = { viewModel.nextCard() },
-                        onPrev = { viewModel.prevCard() }
-                    )
-                }
-            } else {
-                Column(modifier = Modifier.fillMaxSize()) {
-                    TopBar(
-                        modifier = Modifier,
-                        isCompactHeight = isCompactHeight,
-                        isLandscape = false,
-                        isShuffled = uiState.isShuffled,
-                        ttsSpeed = uiState.ttsSpeed,
-                        preferOnlineVoice = uiState.preferOnlineVoice,
-                        isOnlineVoiceAvailable = isOnlineVoiceAvailable,
-                        selectedWordCount = uiState.selectedWords.size,
-                        totalWordCount = uiState.allFlashcards.size,
-                        onToggleShuffle = { viewModel.toggleShuffle() },
-                        onToggleSpeed = { viewModel.toggleSpeed() },
-                        onToggleVoice = { viewModel.toggleVoicePreference() },
-                        onInstallVoiceData = {
-                            runCatching {
-                                context.startActivity(Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA))
-                            }
-                        },
-                        onOpenWordPicker = { isWordPickerOpen = true }
-                    )
-
-                    DeckPane(
-                        modifier = Modifier.weight(1f),
-                        currentCard = currentCard,
-                        tts = tts,
-                        isTtsReady = isTtsReady,
-                        ttsSpeed = uiState.ttsSpeed,
-                        currentIndex = uiState.currentIndex,
-                        totalCards = uiState.flashcards.size,
-                        isCompactHeight = isCompactHeight,
-                        isLandscape = false,
-                        onOpenWordPicker = { isWordPickerOpen = true },
-                        onNext = { viewModel.nextCard() },
-                        onPrev = { viewModel.prevCard() }
-                    )
                 }
             }
         }
@@ -259,7 +323,8 @@ fun DeckPane(
     currentIndex: Int,
     totalCards: Int,
     isCompactHeight: Boolean,
-    isLandscape: Boolean,
+    isCompactWidth: Boolean,
+    isWideLayout: Boolean,
     onOpenWordPicker: () -> Unit,
     onNext: () -> Unit,
     onPrev: () -> Unit
@@ -278,7 +343,8 @@ fun DeckPane(
                     isTtsReady = isTtsReady,
                     ttsSpeed = ttsSpeed,
                     isCompactHeight = isCompactHeight,
-                    isLandscape = isLandscape
+                    isCompactWidth = isCompactWidth,
+                    isWideLayout = isWideLayout
                 )
             } else {
                 EmptyDeckMessage(onOpenWordPicker = onOpenWordPicker)
@@ -289,6 +355,7 @@ fun DeckPane(
             currentIndex = currentIndex,
             totalCards = totalCards,
             isCompactHeight = isCompactHeight,
+            isCompactWidth = isCompactWidth,
             onNext = onNext,
             onPrev = onPrev
         )
@@ -299,7 +366,8 @@ fun DeckPane(
 fun TopBar(
     modifier: Modifier = Modifier,
     isCompactHeight: Boolean,
-    isLandscape: Boolean,
+    isCompactWidth: Boolean,
+    isSplitLayout: Boolean,
     isShuffled: Boolean,
     ttsSpeed: Float,
     preferOnlineVoice: Boolean,
@@ -312,15 +380,20 @@ fun TopBar(
     onInstallVoiceData: () -> Unit,
     onOpenWordPicker: () -> Unit
 ) {
-    val logoSize = if (isCompactHeight) 56.dp else 80.dp
+    val logoSize = when {
+        isCompactHeight -> 56.dp
+        isSplitLayout -> 72.dp
+        else -> 80.dp
+    }
     val topBarPadding = if (isCompactHeight) 12.dp else 16.dp
     val sectionSpacing = if (isCompactHeight) 6.dp else 8.dp
     val scrollState = rememberScrollState()
+    val showStackedControls = isSplitLayout || isCompactWidth
 
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .then(if (isLandscape) Modifier.verticalScroll(scrollState) else Modifier)
+            .then(if (isSplitLayout) Modifier.verticalScroll(scrollState) else Modifier)
             .padding(horizontal = 16.dp, vertical = topBarPadding),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -334,13 +407,16 @@ fun TopBar(
         )
         Text(
             text = "N400 WhatMean Flashcard 2026",
-            style = if (isCompactHeight) MaterialTheme.typography.headlineSmall else MaterialTheme.typography.headlineMedium,
+            style = when {
+                isCompactWidth || isCompactHeight || isSplitLayout -> MaterialTheme.typography.headlineSmall
+                else -> MaterialTheme.typography.headlineMedium
+            },
             fontWeight = FontWeight.Bold,
             color = Color(0xFF0277BD),
             textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(sectionSpacing))
-        if (isLandscape) {
+        if (showStackedControls) {
             OutlinedButton(
                 onClick = onToggleSpeed,
                 modifier = Modifier.fillMaxWidth()
@@ -448,44 +524,49 @@ fun WordSelectionDialog(
     onClear: () -> Unit,
     onDismiss: () -> Unit
 ) {
-    val configuration = LocalConfiguration.current
-    val maxListHeight =
-        if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) 280.dp else 420.dp
-
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text("Choose Words") },
         text = {
-            Column(modifier = Modifier.fillMaxWidth()) {
-                Text(
-                    text = "${selectedWords.size} of ${allFlashcards.size} selected",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = Color.Gray
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    TextButton(onClick = onSelectAll) {
-                        Text("Select All")
-                    }
-                    TextButton(onClick = onClear) {
-                        Text("Clear")
-                    }
+            BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+                val maxListHeight = when {
+                    maxHeight < 360.dp -> 200.dp
+                    maxWidth < 320.dp -> 260.dp
+                    maxWidth > 520.dp -> 420.dp
+                    else -> 320.dp
                 }
-                HorizontalDivider()
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = maxListHeight)
-                ) {
-                    items(allFlashcards, key = { it.word }) { card ->
-                        WordSelectionRow(
-                            card = card,
-                            isSelected = card.word in selectedWords,
-                            onToggleWord = onToggleWord
-                        )
+
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    Text(
+                        text = "${selectedWords.size} of ${allFlashcards.size} selected",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = Color.Gray
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        TextButton(onClick = onSelectAll) {
+                            Text("Select All")
+                        }
+                        TextButton(onClick = onClear) {
+                            Text("Clear")
+                        }
+                    }
+                    HorizontalDivider()
+                    LazyColumn(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(max = maxListHeight)
+                    ) {
+                        items(allFlashcards, key = { it.word }) { card ->
+                            WordSelectionRow(
+                                card = card,
+                                isSelected = card.word in selectedWords,
+                                onToggleWord = onToggleWord
+                            )
+                        }
                     }
                 }
             }
@@ -567,7 +648,8 @@ fun FlashcardView(
     isTtsReady: Boolean,
     ttsSpeed: Float,
     isCompactHeight: Boolean,
-    isLandscape: Boolean
+    isCompactWidth: Boolean,
+    isWideLayout: Boolean
 ) {
     var rotated by remember(card) { mutableStateOf(false) }
     val rotation by animateFloatAsState(
@@ -581,12 +663,25 @@ fun FlashcardView(
             .padding(horizontal = 16.dp, vertical = if (isCompactHeight) 8.dp else 16.dp),
         contentAlignment = Alignment.Center
     ) {
-        val cardAspectRatio = if (isLandscape) 0.92f else 0.7f
+        val cardAspectRatio = when {
+            isWideLayout -> 0.92f
+            isCompactWidth -> 0.74f
+            else -> 0.7f
+        }
 
-        // Size the card from both width and height so it never overlaps the top controls or bottom bar.
-        val widthFromScreen = maxWidth * if (isLandscape) 0.78f else if (isCompactHeight) 0.84f else 0.88f
-        val widthFromHeight = maxHeight * cardAspectRatio * if (isCompactHeight) 0.9f else 0.94f
-        val cardWidth = if (widthFromHeight < widthFromScreen) widthFromHeight else widthFromScreen
+        // Use whichever dimension is more limiting so the card always fits while the window is resized.
+        val widthFromScreen = maxWidth * when {
+            isWideLayout -> 0.8f
+            isCompactWidth -> 0.94f
+            isCompactHeight -> 0.84f
+            else -> 0.88f
+        }
+        val widthFromHeight = maxHeight * cardAspectRatio * when {
+            isCompactWidth -> 0.94f
+            isCompactHeight -> 0.9f
+            else -> 0.95f
+        }
+        val cardWidth = minOf(widthFromHeight, widthFromScreen).coerceIn(220.dp, 620.dp)
 
         Card(
             modifier = Modifier
@@ -607,7 +702,8 @@ fun FlashcardView(
                     isTtsReady = isTtsReady,
                     ttsSpeed = ttsSpeed,
                     isCompactHeight = isCompactHeight,
-                    isLandscape = isLandscape
+                    isCompactWidth = isCompactWidth,
+                    isWideLayout = isWideLayout
                 )
             } else {
                 Box(
@@ -621,7 +717,8 @@ fun FlashcardView(
                         isTtsReady = isTtsReady,
                         ttsSpeed = ttsSpeed,
                         isCompactHeight = isCompactHeight,
-                        isLandscape = isLandscape
+                        isCompactWidth = isCompactWidth,
+                        isWideLayout = isWideLayout
                     )
                 }
             }
@@ -636,7 +733,8 @@ fun FlashcardFront(
     isTtsReady: Boolean,
     ttsSpeed: Float,
     isCompactHeight: Boolean,
-    isLandscape: Boolean
+    isCompactWidth: Boolean,
+    isWideLayout: Boolean
 ) {
     val context = LocalContext.current
     val imageResId = remember(card.imageName) {
@@ -647,11 +745,12 @@ fun FlashcardFront(
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val imageHeight = (
             maxHeight * when {
-                isLandscape -> 0.26f
+                isWideLayout -> 0.28f
+                isCompactWidth -> 0.32f
                 isCompactHeight -> 0.34f
                 else -> 0.4f
             }
-        ).coerceIn(100.dp, if (isLandscape) 150.dp else 190.dp)
+        ).coerceIn(100.dp, if (isWideLayout) 150.dp else 190.dp)
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -669,13 +768,13 @@ fun FlashcardFront(
             Text(
                 text = card.word,
                 style = when {
-                    isLandscape -> MaterialTheme.typography.headlineSmall
+                    isWideLayout || isCompactWidth -> MaterialTheme.typography.headlineSmall
                     isCompactHeight -> MaterialTheme.typography.headlineMedium
                     else -> MaterialTheme.typography.headlineLarge
                 },
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(horizontal = 16.dp)
+                modifier = Modifier.padding(horizontal = if (isCompactWidth) 12.dp else 16.dp)
             )
             Spacer(modifier = Modifier.weight(1f))
             PlayAudioButton(
@@ -697,14 +796,25 @@ fun FlashcardBack(
     isTtsReady: Boolean,
     ttsSpeed: Float,
     isCompactHeight: Boolean,
-    isLandscape: Boolean
+    isCompactWidth: Boolean,
+    isWideLayout: Boolean
 ) {
-    val bodyStyle = if (isLandscape) MaterialTheme.typography.titleMedium else MaterialTheme.typography.titleLarge
+    val bodyStyle = if (isWideLayout || isCompactWidth) {
+        MaterialTheme.typography.titleMedium
+    } else {
+        MaterialTheme.typography.titleLarge
+    }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(if (isCompactHeight) 20.dp else 24.dp),
+            .padding(
+                when {
+                    isCompactWidth -> 16.dp
+                    isCompactHeight -> 20.dp
+                    else -> 24.dp
+                }
+            ),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -771,26 +881,30 @@ fun BottomNavBar(
     currentIndex: Int,
     totalCards: Int,
     isCompactHeight: Boolean,
+    isCompactWidth: Boolean,
     onNext: () -> Unit,
     onPrev: () -> Unit
 ) {
+    val horizontalPadding = if (isCompactWidth) 12.dp else 24.dp
+    val iconSize = if (isCompactWidth) 28.dp else 32.dp
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 24.dp, vertical = if (isCompactHeight) 12.dp else 24.dp),
+            .padding(horizontal = horizontalPadding, vertical = if (isCompactHeight) 12.dp else 24.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(onClick = onPrev, enabled = totalCards > 0) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Previous", modifier = Modifier.size(32.dp))
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Previous", modifier = Modifier.size(iconSize))
         }
         Text(
             text = if (totalCards > 0) "${currentIndex + 1} / $totalCards" else "0 / 0",
-            style = MaterialTheme.typography.titleMedium,
+            style = if (isCompactWidth) MaterialTheme.typography.titleSmall else MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
         IconButton(onClick = onNext, enabled = totalCards > 0) {
-            Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Next", modifier = Modifier.size(32.dp))
+            Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Next", modifier = Modifier.size(iconSize))
         }
     }
 }
