@@ -1,5 +1,11 @@
 {
   "expo": {
+    "name": "N400 WhatMean Flashcard 2026",
+    "slug": "n400-whatmean-flashcard-2026",
+    "version": "3.0.0",
+    "android": {
+      "package": "com.khoivo.n400whatmeanflashcard2026"
+    },
     "extra": {
       "eas": {
         "projectId": "61206559-e1dd-46ab-ab3c-3d841da112a2"
