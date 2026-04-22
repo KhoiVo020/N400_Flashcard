@@ -2,16 +2,7 @@
 .gradle
 /local.properties
 /.eas
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.idea/appInsightsSettings.xml
-.idea/deviceManager.xml
-.idea/inspectionProfiles/
-.idea/vcs.xml
+.idea/
 .DS_Store
 build/
 **/build/
