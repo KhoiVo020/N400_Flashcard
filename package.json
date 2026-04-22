@@ -1,0 +1,10 @@
+{
+  "name": "n400-whatmean-flashcard-2026",
+  "private": true,
+  "version": "3.0.0",
+  "description": "Native Android app configured for EAS Build",
+  "scripts": {
+    "eas:build:preview": "npx eas-cli build --platform android --profile preview",
+    "eas:build:production": "npx eas-cli build --platform android --profile production"
+  }
+}

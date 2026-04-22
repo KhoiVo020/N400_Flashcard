@@ -1,0 +1,11 @@
+.git
+.gradle
+.idea
+.kotlin
+local.properties
+app/release
+**/build
+*.apk
+*.aab
+captures
+.DS_Store
